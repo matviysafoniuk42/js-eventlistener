@@ -73,10 +73,24 @@ button10.addEventListener("mouseleave", function(event) {
     console.log('курсор вийшов з кнопки');
 })
 
-// const input = document.querySelector("#myInput")
-// input.addEventListener("input", function() {
-//     console.log(input.value);
+// document.addEventListener("keydown", function(event) {
+//     console.log('натиснута клавіша');
 // })
+
+// document.addEventListener("keyup", function(event) {
+//     console.log('відпущена клавіша');
+// })
+
+document.addEventListener("keydown", function(event) {
+    if (event.code == 'KeyZ' && event.ctrlKey) {
+        console.log('Ctrl + Z');
+    }
+})
+
+const input = document.querySelector("#myInput")
+input.addEventListener("input", function() {
+    console.log(input.value);
+})
 
 // document.addEventListener("keydown", function(event) {
 //     console.log(event.key);
