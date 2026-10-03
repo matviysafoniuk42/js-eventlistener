@@ -33,6 +33,45 @@ function myFunction3(event) {
 
 button4.addEventListener("click", myFunction3)
 
+const container = document.querySelector(".container")
+function function2() {
+    console.log('Hello!');
+}
+
+container.addEventListener("click", function (event) {
+    if (event.target.closest(".myButton")) {
+        function2()
+    }
+})
+
+const link = document.querySelector("#myLink")
+
+link.addEventListener("click", function(event) {
+    console.log('натиснуто на посилання');
+    event.preventDefault()
+}, { "passive": true})  
+
+const button10 = document.querySelector("#button")
+
+button10.addEventListener("click", function(event) {
+    console.log('натиснуто на кнопку');
+})
+
+button10.addEventListener("mousedown", function(event) {
+    console.log('натиснуто на кнопку ${event.which}');
+})
+
+button10.addEventListener("contextmenu", function(event) {
+    console.log('викликано контекстне меню');
+})
+
+button10.addEventListener("mouseenter", function(event) {
+    console.log('курсор увійшов на кнопку');
+})
+
+button10.addEventListener("mouseleave", function(event) {
+    console.log('курсор вийшов з кнопки');
+})
 
 // const input = document.querySelector("#myInput")
 // input.addEventListener("input", function() {
