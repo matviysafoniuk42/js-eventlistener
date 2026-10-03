@@ -92,6 +92,28 @@ input.addEventListener("input", function() {
     console.log(input.value);
 })
 
+window.addEventListener("scroll", function(event) {
+    console.log('${scrollY}px');
+});
+
+// document.addEventListener("DOMContentLoaded", readyDOM);
+
+// window.addEventListener("load", readyLoad);
+
+// function readyDOM() {
+//     const image = document.querySelector(".image");
+//     console.log(document.readyState);
+//     console.log('DOM готовий');
+//     console.log(image.offsetWidth);
+// }
+
+// function readyLoad() {
+//     const image = document.querySelector(".image");
+//     console.log(document.readyState);
+//     console.log('Сторінка повністю завантажена');
+//     console.log(image.offsetWidth);
+// }
+
 // document.addEventListener("keydown", function(event) {
 //     console.log(event.key);
 // })
